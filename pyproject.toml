@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=65", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "weak2strong-math-pgr"
+version = "0.1.0"
+description = "Few-shot Weak-to-Strong experiments on the MATH dataset (Performance Gap Recovered metric)"
+readme = "README.md"
+requires-python = ">=3.10"
+
+dependencies = [
+    "openai>=1.51.0",
+    "anthropic>=0.34.0",
+    "datasets>=3.0.1",
+    "numpy>=2.0.0",
+    "pandas>=2.2.0",
+    "scipy>=1.13.0",
+    "matplotlib>=3.9.0",
+    "python-dotenv>=1.0.1",
+    "sympy>=1.13.0",
+    "tqdm>=4.66.0"
+]
+
+[project.optional-dependencies]
+dev = ["black", "pytest"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.scripts]
+run-pgr = "scripts.run_pgr:main"
+
+[tool.black]
+line-length = 100
+target-version = ["py312"]

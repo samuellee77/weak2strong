@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+external/
+.DS_Store
+scripts/
+src/weak2strong_math_pgr.egg-info
