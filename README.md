@@ -24,6 +24,8 @@ weak2strong/
 ├── external/
 │   └── prm800k/             # Cloned OpenAI dataset repo (via Git LFS)
 │
+├── results/                 # Experiment results are stored here
+│
 ├── .env.example             # Template for API keys
 ├── pyproject.toml           # Editable install config
 ├── requirements.txt
@@ -37,7 +39,7 @@ weak2strong/
 ### 1. Clone and enter the repo
 
 ```bash
-git clone https://github.com/<your-username>/weak2strong.git
+git clone https://github.com/samuellee77/weak2strong.git
 cd weak2strong
 ````
 
@@ -80,7 +82,6 @@ cp .env.example .env
 
 ```ini
 OPENAI_API_KEY=sk-your-openai-key
-ANTHROPIC_API_KEY=sk-ant-your-anthropic-key
 ```
 
 The script automatically loads these from `.env`.
