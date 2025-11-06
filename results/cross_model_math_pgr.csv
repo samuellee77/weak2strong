@@ -1,0 +1,11 @@
+,weak_model,strong_model,acc
+0,o3-mini,gpt-5-mini,0.9285714285714285
+1,gpt-4.1-mini,gpt-5-mini,0.7500000000000014
+2,gpt-4o-mini,gpt-5-mini,0.9847328244274809
+3,gpt-4.1-nano,gpt-5-mini,0.9705882352941183
+4,gpt-4.1-mini,o3-mini,1.230769230769229
+5,gpt-4o-mini,o3-mini,1.0693069306930691
+6,gpt-4.1-nano,o3-mini,1.0
+7,gpt-4o-mini,gpt-4.1-mini,1.0363636363636364
+8,gpt-4.1-nano,gpt-4.1-mini,0.8965517241379309
+9,gpt-4.1-nano,gpt-4.1-mini,0.9479166666666666
