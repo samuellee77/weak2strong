@@ -1,7 +1,7 @@
 # Weak-to-Strong: PGR Experiments on the MATH Dataset
 
 This repository reproduces **Weak-to-Strong (W2S)** style experiments using few-shot prompting on the **MATH** dataset. It measures **Performance Gap Recovered (PGR)** when a strong model is prompted with examples labeled by a weaker one.
-$$ \text{PGR} = \frac{\text{Acc}_{S|\text{weak}} - \text{Acc}_{W|\text{gold}}}{\text{Acc}_{S|\text{gold}} - \text{Acc}_{W|\text{gold}}}$$
+$$\text{PGR} = \frac{\text{Acc}_{S|\text{weak}} - \text{Acc}_{W|\text{gold}}}{\text{Acc}_{S|\text{gold}} - \text{Acc}_{W|\text{gold}}}$$
 
 ---
 
@@ -99,9 +99,7 @@ Go to `main.ipynb` and run the explore different models and parameters.
 2. Builds few-shot prompts using examples from the **weak** model
 3. Evaluates both weak and strong models using OpenAI’s async API
 4. Computes **Performance Gap Recovered (PGR)**:
-   $$
-   \text{PGR} = \frac{\text{Acc}_{S|\text{weak}} - \text{Acc}_{W|\text{gold}}}{\text{Acc}_{S|\text{gold}} - \text{Acc}_{W|\text{gold}}}
-   $$
+   $$\text{PGR} = \frac{\text{Acc}_{S|\text{weak}} - \text{Acc}_{W|\text{gold}}}{\text{Acc}_{S|\text{gold}} - \text{Acc}_{W|\text{gold}}}$$
    where:
 
    * $\text{Acc}_{S|\text{weak}}$: strong model accuracy using weak-labeled examples
