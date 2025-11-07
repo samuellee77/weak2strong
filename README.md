@@ -2,7 +2,7 @@
 
 This repository reproduces **Weak-to-Strong (W2S)** style experiments using few-shot prompting on the **MATH** dataset. It measures **Performance Gap Recovered (PGR)** when a strong model is prompted with examples labeled by a weaker one.
 
-$\text{PGR} = \frac{\text{Acc}_{S|\text{weak}} - \text{Acc}_{W|\text{gold}}}{\text{Acc}_{S|\text{gold}} - \text{Acc}_{W|\text{gold}}}$
+<img src="https://latex.codecogs.com/svg.image?\text{PGR}=\frac{\text{Acc}_{S|\text{weak}}-\text{Acc}_{W|\text{gold}}}{\text{Acc}_{S|\text{gold}}-\text{Acc}_{W|\text{gold}}}" style="filter: invert(1);" />
 
 ---
 
@@ -99,7 +99,10 @@ Go to `main.ipynb` and run the explore different models and parameters.
 1. Loads the **MATH** dataset from `prm800k/prm800k/math_splits/`
 2. Builds few-shot prompts using examples from the **weak** model
 3. Evaluates both weak and strong models using OpenAI’s async API
-4. Computes **Performance Gap Recovered (PGR)**: $\text{PGR} = \frac{\text{Acc}_{S|\text{weak}} - \text{Acc}_{W|\text{gold}}}{\text{Acc}_{S|\text{gold}} - \text{Acc}_{W|\text{gold}}}$
+4. Computes **Performance Gap Recovered (PGR)**:
+
+   <img src="https://latex.codecogs.com/svg.image?\text{PGR}=\frac{\text{Acc}_{S|\text{weak}}-\text{Acc}_{W|\text{gold}}}{\text{Acc}_{S|\text{gold}}-\text{Acc}_{W|\text{gold}}}" style="filter: invert(1);" />
+
    where:
 
    * $\text{Acc}_{S|\text{weak}}$: strong model accuracy using weak-labeled examples
