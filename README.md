@@ -1,7 +1,7 @@
 # Weak-to-Strong: PGR Experiments on the MATH Dataset
 
-This repository reproduces **Weak-to-Strong (W2S)** style experiments using few-shot prompting on the **MATH** dataset.  
-It measures **Performance Gap Recovered (PGR)** when a strong model is prompted with examples labeled by a weaker one.
+This repository reproduces **Weak-to-Strong (W2S)** style experiments using few-shot prompting on the **MATH** dataset. It measures **Performance Gap Recovered (PGR)** when a strong model is prompted with examples labeled by a weaker one.
+$$ \text{PGR} = \frac{\text{Acc}_{S|\text{weak}} - \text{Acc}_{W|\text{gold}}}{\text{Acc}_{S|\text{gold}} - \text{Acc}_{W|\text{gold}}}$$
 
 ---
 
@@ -29,6 +29,7 @@ weak2strong/
 ├── .env.example             # Template for API keys
 ├── pyproject.toml           # Editable install config
 ├── requirements.txt
+├── progress.md
 └── README.md
 ```
 
@@ -41,7 +42,7 @@ weak2strong/
 ```bash
 git clone https://github.com/samuellee77/weak2strong.git
 cd weak2strong
-````
+```
 
 ### 2. Create and activate a virtual environment
 
@@ -98,18 +99,18 @@ Go to `main.ipynb` and run the explore different models and parameters.
 2. Builds few-shot prompts using examples from the **weak** model
 3. Evaluates both weak and strong models using OpenAI’s async API
 4. Computes **Performance Gap Recovered (PGR)**:
-   [
-   \text{PGR} = \frac{A_{S|W} - A_{W|G}}{A_{S|G} - A_{W|G}}
-   ]
+   $$
+   \text{PGR} = \frac{\text{Acc}_{S|\text{weak}} - \text{Acc}_{W|\text{gold}}}{\text{Acc}_{S|\text{gold}} - \text{Acc}_{W|\text{gold}}}
+   $$
    where:
 
-   * (A_{S|W}): strong model accuracy using weak-labeled examples
-   * (A_{S|G}): strong model accuracy using gold examples
-   * (A_{W|G}): weak model accuracy using gold examples
+   * $\text{Acc}_{S|\text{weak}}$: strong model accuracy using weak-labeled examples
+   * $\text{Acc}_{S|\text{gold}}$: strong model accuracy using gold examples
+   * $\text{Acc}_{W|\text{gold}}$: weak model accuracy using gold examples
 
 ---
 
-## 📚 References
+## References
 
 * [OpenAI: Weak-to-Strong Generalization](https://openai.com/index/weak-to-strong-generalization/)
 * [PRM800K Dataset (OpenAI)](https://github.com/openai/prm800k)

@@ -4,5 +4,5 @@ __pycache__/
 .env
 external/
 .DS_Store
-scripts/
+# scripts/
 src/weak2strong_math_pgr.egg-info
