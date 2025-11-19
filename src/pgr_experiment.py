@@ -75,7 +75,9 @@ async def run_pgr_experiment(
         print(f"Acc (weak model with gold labels): {acc_weak_gold:.4f}")
 
     denom = (acc_strong_gold - acc_weak_gold)
-    if denom == 0:
-        return 0.0
-    pgr = (acc_strong_weak - acc_weak_gold) / denom
-    return pgr
+    if denom <= 0:
+        pgr = np.nan
+    else:
+        pgr = (acc_strong_weak - acc_weak_gold) / denom
+        pgr = max(0.0, min(1.0, pgr))
+    return pgr, acc_strong_weak, acc_strong_gold, acc_weak_gold

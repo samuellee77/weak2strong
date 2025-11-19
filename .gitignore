@@ -6,3 +6,4 @@ external/
 .DS_Store
 # scripts/
 src/weak2strong_math_pgr.egg-info
+wandb/

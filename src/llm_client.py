@@ -21,24 +21,27 @@ async def call_chat_model(messages: list[dict], model: str, max_retries: int = 5
                 if "o3" in model:
                     resp = await client.chat.completions.create(
                         model=model,
-                        max_completion_tokens=2048,
+                        max_completion_tokens=4096,
                         temperature=1,
                         messages=messages,
                         reasoning_effort="low",
+                        seed=42
                     )
                 elif model == "gpt-5-mini":
                     resp = await client.chat.completions.create(
                         model=model,
-                        max_completion_tokens=2048,
+                        max_completion_tokens=4096,
                         messages=messages,
                         reasoning_effort="low",
+                        seed=42
                     )
                 else:
                     resp = await client.chat.completions.create(
                         model=model,
-                        max_completion_tokens=2048,
+                        max_completion_tokens=4096,
                         temperature=0,
                         messages=messages,
+                        seed=42
                     )
                 return resp
             except Exception as e:
